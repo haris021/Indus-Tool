@@ -4,3 +4,4 @@ altair
 plotly
 streamlit_autorefresh
 collect_data
+pip
