@@ -44,7 +44,7 @@ rivers = ['Indus','Jhelum', 'Chenab', 'Kabul']
 river_ops = st.sidebar.radio("River Inflow plot", rivers)
 
 lev_rivers = ['Indus','Jhelum']
-river_level = st.sidebar.radio("River level plot", lev_rivers)
+reservoir_level = st.sidebar.radio("Reservoir level plot", lev_rivers)
 
 barages = ['Guddu','Sukkur','Kotri']
 selected_barage = st.sidebar.radio("Barage", barages)
@@ -52,7 +52,7 @@ selected_barage = st.sidebar.radio("Barage", barages)
 #retrieve inflow data
 flow_river = river_ops + '_Inflow'
 df = pre_process_inflow_data()
-level_river = river_level + '_levels'
+level_river = reservoir_level + '_levels'
 file = 'Sindh_barage.xlsx'
 dfb = pd.read_excel(file)
 barage_df = dfb.loc[dfb['Station'] == selected_barage]
