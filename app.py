@@ -78,7 +78,7 @@ fig.add_trace(go.Scatter(name = 'Today',x=barage_df['Time'], y=barage_df['Today'
 fig.add_trace(go.Scatter(name = 'Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
 fig.update_layout(height=550, width=800, showlegend=True,
                   title_text="Pakistan Flow Analytics",
-                  legend = dict(yanchor="top",y=0.99, xanchor="right", x=0.01)
+                  #legend = dict(yanchor="top",y=0.99, xanchor="right", x=0.01)
                   )
 st.write(fig)
 
