@@ -4,3 +4,4 @@ altair
 plotly
 streamlit_autorefresh
 bs4
+openpyxl
