@@ -3,5 +3,4 @@ pandas
 altair
 plotly
 streamlit_autorefresh
-collect_data
-/home/appuser/venv/bin/python -m pip install --upgrade pip
+bs4
