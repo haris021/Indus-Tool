@@ -76,7 +76,7 @@ fig.add_trace(go.Scatter(name ='Inflows',x=df['Time'], y=df[flow_river]),row=1, 
 fig.add_trace(go.Scatter(name ='Reservior levels',x=df['Time'], y=df[level_river]),row=2, col=1)
 fig.add_trace(go.Scatter(name = 'Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name = 'Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
-fig.update_layout(height=550, width=800, showlegend=True,
+fig.update_layout(height=800, width=1000, showlegend=True,
                   title_text="Pakistan Flow Analytics",
                   #legend = dict(yanchor="top",y=0.99, xanchor="right", x=0.01)
                   )
