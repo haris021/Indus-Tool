@@ -62,7 +62,7 @@ barage_df = dfb.loc[dfb['Station'] == selected_barage]
 fig = make_subplots(
     rows=2, cols=2,
     specs=[[{"colspan": 2}, None],[{}, {}]],
-    subplot_titles=('Time series of Inflow levels of '+ river_ops,
+    subplot_titles=('Time series of Inflows of '+ river_ops,
                     "Reservior Levels Time Series",
                     "Barage Flow Time Series"))
 # fig.update_xaxes(title_text="xaxis 1 title", row=1, col=1)
@@ -72,7 +72,7 @@ fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
 fig.update_yaxes(title_text="ft", range=[10, 50], row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
-fig.add_trace(go.Scatter(name ='Inflow levels',x=df['Time'], y=df[flow_river]),row=1, col=1)
+fig.add_trace(go.Scatter(name ='Inflows',x=df['Time'], y=df[flow_river]),row=1, col=1)
 fig.add_trace(go.Scatter(name ='Reservior levels',x=df['Time'], y=df[level_river]),row=2, col=1)
 fig.add_trace(go.Scatter(name = 'Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name = 'Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
