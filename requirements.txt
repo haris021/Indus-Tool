@@ -4,4 +4,4 @@ altair
 plotly
 streamlit_autorefresh
 collect_data
-pip
+/home/appuser/venv/bin/python -m pip install --upgrade pip
