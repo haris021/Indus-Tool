@@ -43,7 +43,7 @@ st.sidebar.title('Select Ploting Options')
 rivers = ['Indus','Jhelum', 'Chenab', 'Kabul']
 river_ops = st.sidebar.radio("River Inflow plot", rivers)
 
-lev_rivers = ['Tarbela','Mangla']
+lev_rivers = ['Indus','Jhelum']
 reservoir_level = st.sidebar.radio("Reservoir level plot", lev_rivers)
 
 barages = ['Guddu','Sukkur','Kotri']
