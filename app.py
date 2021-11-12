@@ -83,7 +83,7 @@ fig = make_subplots(
 
 
 fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False),row=1, col=1)
-fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_river],showlegend = False),row=2, col=1)
+fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_reservoir],showlegend = False),row=2, col=1)
 fig.add_trace(go.Scatter(name ='Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
 fig.update_layout(height=550, width=700, showlegend=True, title_text="Pakistan Flow Analytics", legend = dict(yanchor="top",y=0.45))
