@@ -79,7 +79,9 @@ fig = make_subplots(
     subplot_titles=('Time series of Inflow levels of '+ river_ops,
                     "Reservoir Levels Time Series",
                     "Barage Flow Time Series"))
-
+fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
+fig.update_yaxes(title_text="feet", range=[10, 50], row=2, col=1)
+fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
 
 fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False),row=1, col=1)
