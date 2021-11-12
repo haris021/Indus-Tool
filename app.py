@@ -43,7 +43,7 @@ st.sidebar.title('Select Ploting Options')
 rivers = ['Indus','Jhelum', 'Chenab', 'Kabul']
 river_ops = st.sidebar.radio("River Inflow plot", rivers)
 
-lev_rivers = ['Indus','Jhelum']
+lev_rivers = ['Tarbela','Mangla']
 reservoir_level = st.sidebar.radio("Reservoir level plot", lev_rivers)
 
 barages = ['Guddu','Sukkur','Kotri']
@@ -60,7 +60,7 @@ barage_df = dfb.loc[dfb['Station'] == selected_barage]
 
 
 cutoff = 1380
-if reservoir_level=='Jhelum':
+if reservoir_level=='Mangla':
      cutoff = 1000
 
 
@@ -86,7 +86,7 @@ fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showle
 fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_reservoir],showlegend = False),row=2, col=1)
 fig.add_trace(go.Scatter(name ='Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
-fig.update_layout(height=550, width=700, showlegend=True, title_text="Pakistan Flow Analytics", legend = dict(yanchor="top",y=0.45))
+fig.update_layout(height=800, width=700, showlegend=True, title_text="Pakistan Flow Analytics", legend = dict(yanchor="top",y=0.45))
 st.write(fig)
 
 # download = st.button('Download Shape File')
