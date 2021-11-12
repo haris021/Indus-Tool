@@ -80,7 +80,7 @@ fig = make_subplots(
                     "Reservoir Levels Time Series",
                     "Barage Flow Time Series"))
 fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
-fig.update_yaxes(title_text="feet", range=[10, 50], row=2, col=1)
+fig.update_yaxes(title_text="feet",  row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
 
