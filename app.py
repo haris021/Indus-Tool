@@ -48,7 +48,7 @@ reservoir_level = st.sidebar.radio("Reservoir level plot", lev_rivers)
 
 barages = ['Guddu','Sukkur','Kotri']
 selected_barage = st.sidebar.radio("Barage", barages)
-
+st.sidebar.image("logo.png", width=100)
 #retrieve inflow data
 flow_river = river_ops + '_Inflow'
 df = pre_process_inflow_data()
