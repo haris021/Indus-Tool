@@ -101,15 +101,11 @@ fig.update_layout(height=800, width=1000, showlegend=True, title_text="Pakistan 
 st.write(fig)
 st.text("")
     # Provide references
-st.subheader("Data References")
+st.subheader("Data Sources")
 st.markdown(
         """
- 1. Annual electricity consumption data of electric TWs was obtained from NEPRA
- State of Industry Reports: https://nepra.org.pk/publications/SOI_reports.php 
- (It is assumed that all agricultural electric consumption is for TW pumping).
- 2. Annual total groundwater extraction and tubewell inventory (no.s) data
- was obtained from Agricultural Statistics of Pakistan - Ministry of National
- Food Security and Research: http://www.mnfsr.gov.pk/pubDetails.aspx.    
+ 1. River inflows and reservoir levels are obtained from http://www.wapda.gov.pk/index.php/river-flow-data.
+ 2. Barrage levels are obtained from http://www.wapda.gov.pk/index.php/hydroreservior-in-pakistan?tmpl=component&id=43 
         """
  )
 st.text("")
