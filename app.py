@@ -100,6 +100,20 @@ fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Las
 fig.update_layout(height=800, width=1000, showlegend=True, title_text="Pakistan Flow Analytics", legend = dict(yanchor="top",y=0.45))
 st.write(fig)
 
+st.text("")
+    # Provide references
+    st.subheader("Data References")
+    st.markdown(
+        """
+        1. Annual electricity consumption data of electric TWs was obtained from NEPRA
+        State of Industry Reports: https://nepra.org.pk/publications/SOI_reports.php 
+        (It is assumed that all agricultural electric consumption is for TW pumping).
+        2. Annual total groundwater extraction and tubewell inventory (no.s) data
+        was obtained from Agricultural Statistics of Pakistan - Ministry of National
+        Food Security and Research: http://www.mnfsr.gov.pk/pubDetails.aspx.    
+        """
+    )
+    st.text("")
 # download = st.button('Download Shape File')
 # shape_file_dict = {'chenab':'newchenab.shp',
 #                    'Kabul':'krbshape.shp',
