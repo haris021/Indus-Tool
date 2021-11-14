@@ -65,7 +65,7 @@ barage_df = dfb.loc[dfb['Station'] == selected_barage]
 
 
 cutoff = 1380
-if river_level=='Jhelum':
+if reservoir_level=='Jhelum':
      cutoff = 1000
 
 
