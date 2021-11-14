@@ -45,16 +45,19 @@ river_dict = {'Tarbela':'Indus','Mangla':'Jhelum'}
 river_ops = st.sidebar.radio("River Inflow plot", rivers)
 
 #lev_rivers = ['Indus','Jhelum']
-river_lev = st.sidebar.radio("River level plot", river_dict.keys())
-river_level = river_dict[river_lev]
+river_lev = st.sidebar.radio("Reservoir level plot", river_dict.keys())
+reservoir_level = river_dict[river_lev]
 
 barages = ['Guddu','Sukkur','Kotri']
 selected_barage = st.sidebar.radio("Barage", barages)
 
+st.sidebar.image("logo.png", width=100)
+
+
 #retrieve inflow data
 flow_river = river_ops + '_Inflow'
 df = pre_process_inflow_data()
-level_river = river_level + '_levels'
+level_reservoir = reservoir_level + '_levels'
 file = 'Sindh_barage.xlsx'
 dfb = pd.read_excel(file)
 barage_df = dfb.loc[dfb['Station'] == selected_barage]
@@ -66,7 +69,7 @@ if river_level=='Jhelum':
      cutoff = 1000
 
 
-reservior_data = df[df[level_river]>cutoff]
+reservior_data = df[df[level_reservoir]>cutoff]
 
 
 if river_ops == 'Kabul':
@@ -78,8 +81,8 @@ else :
 fig = make_subplots(
     rows=2, cols=2,
     specs=[[{"colspan": 2}, None],[{}, {}]],
-    subplot_titles=('Time series of Inflow levels of '+ river_ops,
-                    "River Levels Time Series",
+    subplot_titles=('Streamflow of '+ river_ops,
+                    "Reservoir Levels Time Series",
                     "Barage Flow Time Series"))
 
 # fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
@@ -91,7 +94,7 @@ fig.update_yaxes(title_text="ft", row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
 fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False),row=1, col=1)
-fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_river],showlegend = False),row=2, col=1)
+fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_reservoir],showlegend = False),row=2, col=1)
 fig.add_trace(go.Scatter(name ='Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
 fig.update_layout(height=800, width=1000, showlegend=True, title_text="Pakistan Flow Analytics", legend = dict(yanchor="top",y=0.45))
