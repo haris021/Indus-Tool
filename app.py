@@ -101,8 +101,8 @@ fig.update_layout(height=800, width=1000, showlegend=True, title_text="Pakistan 
 st.write(fig)
 st.text("")
     # Provide references
- st.subheader("Data References")
- st.markdown(
+st.subheader("Data References")
+st.markdown(
         """
  1. Annual electricity consumption data of electric TWs was obtained from NEPRA
  State of Industry Reports: https://nepra.org.pk/publications/SOI_reports.php 
