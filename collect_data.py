@@ -28,7 +28,7 @@ def table_to_csv(table_data, headings,out_file):
 		data.append(sub_data)
 
 	df = pd.DataFrame(data, columns=headings)
-	df.to_excel(out_file)
+	df.to_csv(out_file)
 
 
 def get_river_flow_data():
@@ -72,7 +72,7 @@ def get_sindh_barage_data():
 	df['Time'] = pd.to_datetime(df['Time'])
 	print(df)
 	df = df.drop_duplicates()
-	df.to_excel(out, index=False)
+	df.to_csv(out, index=False)
 
 
 get_river_flow_data()
