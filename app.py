@@ -22,8 +22,8 @@ def update_data():
     print('refreshed data')
 
 def save_data(df1,df2):
-     df1.to_excel('flow_Data.xlsx')
-     df2.to_excel('barage_data.xlsx')
+     df1.to_excel('https://github.com/haris021/Indus-Tool.git/flow_Data.xlsx')
+     df2.to_excel('https://github.com/haris021/Indus-Tool.git/barage_data.xlsx')
      print('made backup data')
 
 
@@ -58,7 +58,7 @@ st.sidebar.image("logo.png", width=100)
 flow_river = river_ops + '_Inflow'
 df = pre_process_inflow_data()
 level_reservoir = reservoir_level + '_levels'
-file = 'Sindh_barage.xlsx'
+file = 'https://github.com/haris021/Indus-Tool.git/Sindh_barage.xlsx'
 dfb = pd.read_excel(file)
 barage_df = dfb.loc[dfb['Station'] == selected_barage]
 
