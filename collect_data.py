@@ -54,8 +54,8 @@ def get_sindh_barage_data():
 	date = time_arr[1]
 	print(date)
 	sindh_data = table_data[25:28]
-	out = 'https://github.com/haris021/Indus-Tool/edit/main/Sindh_barage.xlsx'
-	df = pd.read_excel(out, engine= 'openpyxl')
+	out = 'Sindh_barage.xlsx'
+	df = pd.read_excel(out)
 	final_data = []
 	for row in sindh_data:
 		row_data = row.find_all('td')
