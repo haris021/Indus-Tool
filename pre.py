@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 def pre_process_inflow_data():
-    data = pd.read_excel('https://github.com/haris021/Indus-Tool/main/river_flow_data.xlsx', index_col=0)
+    data = pd.read_excel('river_flow_data.xlsx', index_col=0)
     time = to_datetime(data['Time'])
     data['Time'] = time
     last_row = len(data) - 1
