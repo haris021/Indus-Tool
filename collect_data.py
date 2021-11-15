@@ -39,7 +39,7 @@ def get_river_flow_data():
 	Headings = ['Time', 'Indus_levels','Indus_Inflow','Indus_Outflow','Kabul_Inflow',
 	'Jhelum_levels','Jhelum_Inflow','Jhelum_Outflow', 'Chenab_Inflow','System_Inflow_now',
 	'System_Inflow_past','System_Inflow_avg']
-	file = 'river_flow_data.xlsx'
+	file = 'https://github.com/haris021/Indus-Tool/main/river_flow_data.xlsx'
 	table_to_csv(table_data,headings = Headings, out_file = file)
 
 
