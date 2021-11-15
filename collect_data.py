@@ -7,7 +7,8 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-
+import openpyxl
+from openpyxl import Workbook
 
 
 def get_html_table(url):
@@ -54,7 +55,7 @@ def get_sindh_barage_data():
 	print(date)
 	sindh_data = table_data[25:28]
 	out = 'https://github.com/haris021/Indus-Tool/edit/main/Sindh_barage.xlsx'
-	df = pd.read_excel(out)
+	df = pd.read_excel(out, engine= 'openpyxl')
 	final_data = []
 	for row in sindh_data:
 		row_data = row.find_all('td')
