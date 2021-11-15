@@ -39,7 +39,7 @@ def get_river_flow_data():
 	Headings = ['Time', 'Indus_levels','Indus_Inflow','Indus_Outflow','Kabul_Inflow',
 	'Jhelum_levels','Jhelum_Inflow','Jhelum_Outflow', 'Chenab_Inflow','System_Inflow_now',
 	'System_Inflow_past','System_Inflow_avg']
-	file = 'river_flow_data.xlsx'
+	file = 'https://github.com/haris021/Indus-Tool/main/river_flow_data.xlsx'
 	table_to_csv(table_data,headings = Headings, out_file = file)
 
 
@@ -52,7 +52,7 @@ def get_sindh_barage_data():
 	time_arr = time.split(" ")
 	date = time_arr[1]
 	sindh_data = table_data[25:28]
-	out = 'Sindh_barage.xlsx'
+	out = 'https://github.com/haris021/Indus-Tool/main/Sindh_barage.xlsx'
 	df = pd.read_excel(out)
 	final_data = []
 	for row in sindh_data:
