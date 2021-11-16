@@ -51,7 +51,7 @@ reservoir_level = river_dict[river_lev]
 barages = ['Guddu','Sukkur','Kotri']
 selected_barage = st.sidebar.radio("Barage", barages)
 
-col1, col2 = st.sidebar.beta_columns(2)
+col1, col2 = st.sidebar.columns(2)
 col1.st.sidebar.image("logo.png", width=100)
 col2.st.sidebar.image("AGU_logo.png", width=100)
 
