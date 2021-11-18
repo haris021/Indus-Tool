@@ -54,6 +54,8 @@ def get_sindh_barage_data():
 	date = time_arr[1]
 	print(date)
 	sindh_data = table_data[25:28]
+	out = 'Sindh_barage.xlsx'
+	df = pd.read_excel(out)
 	final_data = []
 	for row in sindh_data:
 		row_data = row.find_all('td')
@@ -63,9 +65,15 @@ def get_sindh_barage_data():
 			sub_data.append(entry)
 		print(sub_data)
 		final_data.append(sub_data)
+	print('df before append ........')
+	print(df)
 	df2 = pd.DataFrame(final_data, columns=caps)
-	out = 'https://github.com/haris021/Indus-Tool/edit/main/Sindh_barage.xlsx'
-	df2.to_excel(out)
+	print(df2)
+	df = df.append(df2, ignore_index=True)
+	df['Time'] = pd.to_datetime(df['Time'])
+	print(df)
+	df = df.drop_duplicates()
+	df.to_excel(out, index=False)
 	
 
 
