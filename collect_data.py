@@ -53,7 +53,7 @@ def get_sindh_barage_data():
 	time_arr = time.split(" ")
 	date = time_arr[1]
 	print(date)
-	out ='https://github.com/haris021/Indus-Tool/Sindh_barage.xlsx'
+	out ='https://github.com/haris021/Indus-Tool/main/Sindh_barage.xlsx'
 	#df = pd.read_excel(out)
 	df = pd.read_csv(out,sep='\t')
 	sindh_data = table_data[25:28]
@@ -68,7 +68,7 @@ def get_sindh_barage_data():
 		final_data.append(sub_data)
 	df2 = pd.DataFrame(final_data, columns=caps)
 	df = df.append(df2, ignore_index=True)
-	out ='https://github.com/haris021/Indus-Tool/Sindh_barage.xlsx'
+	out ='https://github.com/haris021/Indus-Tool/main/Sindh_barage.xlsx'
 	#df = pd.read_excel(out)
 	#table_to_csv(final_data,headings = caps, out_file = out)
 	#df2.to_excel(out, startrow=len(dff)+1, header=False, index=False)
