@@ -35,7 +35,7 @@ def save_data(df1,df2):
 #
 # st.savedf(save_data())
 st.set_page_config(layout="wide")
-st.header('Indus Dashboard')
+st.header('Live Indus Dashboard')
 st.sidebar.title('Select Ploting Options')
 
 
