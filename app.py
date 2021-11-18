@@ -59,7 +59,7 @@ st.sidebar.image(["logo.png","AGU_logo.png"], width=100)
 flow_river = river_ops + '_Inflow'
 df = pre_process_inflow_data()
 level_reservoir = reservoir_level + '_levels'
-file = 'Sindh_barage.xlsx'
+file = 'https://github.com/haris021/Indus-Tool/edit/main/Sindh_barage.xlsx'
 dfb = pd.read_excel(file)
 barage_df = dfb.loc[dfb['Station'] == selected_barage]
 
