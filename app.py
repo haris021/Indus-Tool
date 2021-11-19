@@ -91,7 +91,7 @@ fig = make_subplots(
 # fig.update_yaxes(title_text="ft", range=[10, 50], row=2, col=1)
 # fig.update_yaxes(title_text="1000 cusecs", row=2, col=2)
 
-fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
+#fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
 fig.update_yaxes(title_text="feet", row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
