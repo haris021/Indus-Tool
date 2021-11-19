@@ -12,6 +12,7 @@ from pre import pre_process_inflow_data
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import pandas as pd
+import plotly.express as px 
 
 
 
@@ -94,7 +95,8 @@ fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
 fig.update_yaxes(title_text="feet", row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
-fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False),row=1, col=1)
+fig = px.line(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False,row=1, col=1)
+#fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river],showlegend= False),row=1, col=1)
 fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_reservoir],showlegend = False),row=2, col=1)
 fig.add_trace(go.Scatter(name ='Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
