@@ -95,9 +95,13 @@ fig.update_yaxes(title_text="1000 X cusecs", row=1, col=1)
 fig.update_yaxes(title_text="feet", row=2, col=1)
 fig.update_yaxes(title_text="1000 cusecs", showgrid=False, row=2, col=2)
 
-#fig = go.scatter((x=Inflow_Data['Time'], y=Inflow_Data[flow_river]),row=1, col=1)
-fig.add_trace(go.Scatter(x=Inflow_Data['Time'], y=Inflow_Data[flow_river], mode='lines',showlegend= False),row=1, col=1)
-fig.add_trace(go.Scatter(x=reservior_data['Time'], y=reservior_data[level_reservoir],showlegend = False),row=2, col=1)
+date_list, data = zip(*sorted(zip(Inflow_Data['Time'], Inflow_Data[flow_river])))
+
+date_list1, data1 = zip(*sorted(zip(reservior_data['Time'], reservior_data[level_reservoir])))
+#plt.plot(date_list, data)
+fig.add_trace(go.Scatter(x=date_list, y=data),row=1, col=1)
+
+fig.add_trace(go.Scatter(x=date_list1, y=data1,showlegend = False),row=2, col=1)
 fig.add_trace(go.Scatter(name ='Today',x=barage_df['Time'], y=barage_df['Today']), row=2, col=2)
 fig.add_trace(go.Scatter(name ='Last Year',x=barage_df['Time'], y=barage_df['Last Year']),row=2, col=2)
 fig.update_layout(height=800, width=1000, showlegend=True, title_text="Indus River System Analytics", legend = dict(yanchor="top",y=0.45))
