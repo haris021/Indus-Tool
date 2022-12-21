@@ -22,7 +22,7 @@ def pre_process_inflow_data():
 
 def to_datetime(df_time):
     time_arr = np.flip(np.array(df_time))
-    year = 2018  # first record year
+    year = 2022  # first record year
     print('start date..............')
     print(time_arr[0])
     print('past date...............')
